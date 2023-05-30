@@ -120,4 +120,4 @@ curl --location 'localhost:8000/predicao?meses=2&decimal=1' \
 ```
 ## Exemplo Postman
 Por fim, segue um exemplo de utilização no software Postman.
-![Postman](./images/postman.jpeg)
+![Postman](./images/postman.png)
