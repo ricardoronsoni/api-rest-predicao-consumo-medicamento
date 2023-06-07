@@ -1,12 +1,13 @@
 # API de Previsão de Consumo de Medicamentos
-A API de Previsão de Consumo de Medicamentos é uma ferramenta poderosa que permite aos usuários obter insights valiosos sobre o consumo futuro de medicamentos com base em dados históricos. Essa API inovadora utiliza técnicas avançadas de modelagem de séries temporais em machine learning, mais especificamente o modelo ARIMA (AutoRegressive Integrated Moving Average), para gerar previsões precisas e confiáveis para o consumo de medicamentos nos próximos N meses.
+A API de Previsão de Consumo de Medicamentos é uma ferramenta poderosa que permite aos usuários obter insights valiosos sobre o consumo futuro de medicamentos com base em dados históricos. Essa API utiliza técnicas avançadas de modelagem de séries temporais em machine learning, mais especificamente os modelos ARIMA (AutoRegressive Integrated Moving Average) e Prophet, para gerar previsões precisas e confiáveis para o consumo de medicamentos nos próximos N meses.
 
 # Recursos e Funcionalidades:
 - Previsão de Consumo: Os usuários podem fornecer os dados históricos de consumo de medicamentos por meio de um formato de entrada simples e receber uma previsão detalhada para o consumo nos próximos meses;   
-- Precisão: Para cada requisição vários modelos são treinados para obter o melhor para relizar a predição;    
+- Precisão: Para cada requisição dois modelos são treinados (ARIMA e Prophet) para obter o melhor para relizar a predição. O algoritmo mais preciso para os dados informados será utilizado para realizar as predições;    
 - Adaptação: Caso seja informada uma série histórica maior que 12 meses a API automaticamente irá identificar padrões sazonais para uma predição mais precisa;   
 - Personalização: A API permite que os usuários definam a quantidade de meses para a previsão e a quantidade de casas decimais para os valores retornados, adaptando-se às suas necessidades específicas;   
 - Consistência: Regras são aplicadas para verificar se o usuário infomou meses duplicados ou algum gap temporal, datas incorretas, campos ausentes ou mal formatados, tudo para manter a maior consistência possível para as predições;   
+- Informativa: Parâmetros estatisticos são retornados em conjunto com a predição para dar maior transparência ao processo de criação do modelo e predição;   
 - Container Docker: A API foi implementada em um container Docker, o que facilita sua utilização e garante uma implantação simples e rápida em qualquer ambiente compatível com Docker.
 
 # Fluxo de uso:
@@ -14,7 +15,7 @@ A API de Previsão de Consumo de Medicamentos é uma ferramenta poderosa que per
 2. Envie os dados: Forneça os dados históricos de consumo de medicamentos no formato adequado, incluindo o mês e a quantidade mensal consumida;   
 3. Defina a quantidade de meses e arredondamento: Informe o número de meses para a previsão desejada através dos parâmetros da API em conjunto com o arredondamento desejado para os valores previstos, sendo este último um parâmetro não obrigatório;   
 4. Receba a previsão: A API processará as informações fornecidas e retornará uma previsão detalhada para o consumo de medicamentos nos próximos meses;   
-5. Análise os resultados: Explore os resultados obtidos e utilize as informações de previsão para tomar decisões embasadas em relação ao consumo de medicamentos.
+5. Análise os resultados: Explore os resultados obtidos e utilize as informações estatisticas e de previsão para tomar decisões embasadas em relação ao consumo de medicamentos.
 
 # Benefícios:
 - Tomada de Decisão Informada: Através das previsões geradas pela API, os usuários podem antecipar o consumo futuro de medicamentos, permitindo uma melhor gestão de estoques e planejamento estratégico.   
